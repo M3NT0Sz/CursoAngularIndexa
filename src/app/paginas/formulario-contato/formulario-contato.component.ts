@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { SeparadorComponent } from '../../componentes/separador/separador.component';
 import { NgClass } from '@angular/common';
@@ -8,19 +8,29 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { RouterLink } from "@angular/router";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-contato',
   standalone: true,
-  imports: [ContainerComponent, SeparadorComponent, ReactiveFormsModule, NgClass, RouterLink],
+  imports: [
+    ContainerComponent,
+    SeparadorComponent,
+    ReactiveFormsModule,
+    NgClass,
+    RouterLink,
+  ],
   templateUrl: './formulario-contato.component.html',
   styleUrl: './formulario-contato.component.css',
 })
-export class FormularioContatoComponent {
+export class FormularioContatoComponent implements OnInit {
   contatoForm!: FormGroup;
 
-  constructor() {
+  ngOnInit() {
+    this.inicializarFormulario();
+  }
+
+  inicializarFormulario() {
     this.contatoForm = new FormGroup({
       nome: new FormControl('', Validators.required),
       telefone: new FormControl('', Validators.required),

@@ -1,18 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.component';
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { ContatoComponent } from '../../componentes/contato/contato.component';
 import { SeparadorComponent } from '../../componentes/separador/separador.component';
-import { RouterLink } from "@angular/router";
+import { ContatoService } from '../../services/contato.service';
+import { RouterLink } from '@angular/router';
 
 interface Contato {
   id: number;
   nome: string;
   telefone: string;
 }
-
-import agenda from '../../agenda.json';
 
 @Component({
   selector: 'app-lista-contatos',
@@ -23,16 +22,23 @@ import agenda from '../../agenda.json';
     SeparadorComponent,
     ContatoComponent,
     FormsModule,
-    RouterLink
-],
+    RouterLink,
+  ],
   templateUrl: './lista-contatos.component.html',
   styleUrl: './lista-contatos.component.css',
 })
-export class ListaContatosComponent {
+
+export class ListaContatosComponent implements OnInit {
   alfabeto: string = 'abcdefghijklmnopqrstuvwxyz';
-  contatos: Contato[] = agenda;
+  contatos: Contato[] = [];
 
   filtroPorTexto: string = '';
+
+  constructor(private contatoService: ContatoService) {}
+
+  ngOnInit() {
+    this.contatos = this.contatoService.obterContatos();
+  }
 
   filtrarContatosPorTexto(): Contato[] {
     if (!this.filtroPorTexto) {
