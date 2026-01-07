@@ -6,12 +6,7 @@ import { ContatoComponent } from '../../componentes/contato/contato.component';
 import { SeparadorComponent } from '../../componentes/separador/separador.component';
 import { ContatoService } from '../../services/contato.service';
 import { RouterLink } from '@angular/router';
-
-interface Contato {
-  id: number;
-  nome: string;
-  telefone: string;
-}
+import { Contato } from '../../componentes/contato/contato';
 
 @Component({
   selector: 'app-lista-contatos',
