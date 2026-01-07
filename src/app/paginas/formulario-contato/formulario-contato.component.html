@@ -9,38 +9,56 @@
     </section>
   </header>
 
-  <form>
+  <form [formGroup]="contatoForm" (ngSubmit)="salvarContato()">
     <label for="nome">Nome</label>
-    <input type="text" id="nome" placeholder="Digite o nome do contato" />
+    <input
+      type="text"
+      id="nome"
+      placeholder="Digite o nome do contato"
+      formControlName="nome"
+    />
     <label for="telefone">Telefone</label>
     <input
       type="text"
       id="telefone"
       placeholder="Digite o telefone do contato"
+      formControlName="telefone"
     />
     <label for="email">E-mail</label>
-    <input type="email" id="email" placeholder="Digite o email do contato" />
+    <input
+      type="email"
+      id="email"
+      placeholder="Digite o email do contato"
+      formControlName="email"
+    />
 
     <app-separador></app-separador>
 
     <label for="aniversario">Aniversário</label>
     <input
-      type="text"
+      type="date"
       id="aniversario"
       placeholder="Digite o aniversário do contato"
+      formControlName="aniversario"
     />
     <label for="redes">Redes sociais</label>
     <div class="input-container">
       <span class="span-http">http://</span>
-      <input type="url" id="redes" placeholder="Adicione a URL da página" />
+      <input
+        type="url"
+        id="redes"
+        placeholder="Adicione a URL da página"
+        formControlName="redes"
+      />
     </div>
     <textarea
       id="observacoes"
       placeholder='Coloque observações nesse espaço. Exemplo: "Instrutora da academia "Nova Imagem", amida da Júlia"'
+      formControlName="observacoes"
     ></textarea>
 
     <section class="botoes">
-      <button type="button" class="botao-cancelar">Cancelar</button>
+      <button (click)="cancelar()" type="button" class="botao-cancelar">Cancelar</button>
       <button type="submit" class="botao-salvar">Salvar</button>
     </section>
   </form>
