@@ -1,22 +1,13 @@
 {
   "contatos": [
     {
-      "nome": "Maria",
-      "telefone": "99 99999999",
-      "email": "maria@email.com",
-      "aniversario": "1995-06-01",
-      "redes": "",
+      "nome": "Matheus",
+      "telefone": "18 9999-9999",
+      "email": "matheus@matheus.com",
+      "aniversario": "2005-08-26",
+      "redes": "www.m3nt0sz.github.io",
       "observacoes": "",
-      "id": 1
-    },
-    {
-      "nome": "João",
-      "telefone": "88 88888888",
-      "email": "joao@email.com",
-      "aniversario": "1990-01-06",
-      "redes": "",
-      "observacoes": "",
-      "id": 2
+      "id": 3
     }
   ]
 }
