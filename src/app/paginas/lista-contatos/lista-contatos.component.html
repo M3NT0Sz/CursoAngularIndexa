@@ -8,7 +8,7 @@
 
   <section class="adicionar-contato">
     <button routerLink="/formulario">
-      <img src="assets/plus.png" alt="">
+      <img src="assets/plus.png" alt="" />
       <span>Adicionar Contato</span>
     </button>
   </section>
@@ -18,7 +18,11 @@
     {{ letra }}
   </app-separador>
   @for(contato of filtrarContatosPorLetraInicial(letra); track contato.id){
-  <app-contato [nome]="contato.nome" [telefone]="contato.telefone">
+  <app-contato
+    [nome]="contato.nome"
+    [telefone]="contato.telefone"
+    [id]="contato.id!"
+  >
   </app-contato>
   } }
 </app-container>
