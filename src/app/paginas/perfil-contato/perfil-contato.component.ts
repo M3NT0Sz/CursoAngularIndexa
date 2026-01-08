@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { Contato } from '../../componentes/contato/contato';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ContatoService } from '../../services/contato.service';
 import { SeparadorComponent } from '../../componentes/separador/separador.component';
 import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.component';
@@ -13,7 +13,8 @@ import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.compon
     ContainerComponent,
     SeparadorComponent,
     CabecalhoComponent,
-  ],
+    RouterLink
+],
   templateUrl: './perfil-contato.component.html',
   styleUrl: './perfil-contato.component.css',
 })

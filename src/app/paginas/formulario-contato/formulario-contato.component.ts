@@ -29,6 +29,7 @@ import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.compon
 })
 export class FormularioContatoComponent implements OnInit {
   contatoForm!: FormGroup;
+  id?: string;
 
   constructor(
     private contatoService: ContatoService,
@@ -37,6 +38,7 @@ export class FormularioContatoComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.id = this.activatedRoute.snapshot.paramMap.get('id') || undefined;
     this.inicializarFormulario();
     this.carregarContato();
   }

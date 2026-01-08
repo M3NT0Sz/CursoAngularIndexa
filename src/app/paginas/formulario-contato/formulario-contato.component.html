@@ -2,7 +2,7 @@
   <app-cabecalho
     [telaInicial]="false"
     [bannerSrc]="'assets/adicionar-contato.png'"
-    [titulo]="'Adicionar Contato'"
+    [titulo]="id ? 'Editar Contato' : 'Adicionar Contato'"
   ></app-cabecalho>
   <form [formGroup]="contatoForm" (ngSubmit)="salvarContato()">
     <div role="button" class="imagem-contato">

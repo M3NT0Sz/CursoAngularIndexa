@@ -36,7 +36,7 @@
     </ul>
     <div class="botoes">
       <button class="botao-excluir" (click)="excluir()">Excluir Contato</button>
-      <button class="botao-editar">Editar</button>
+      <button class="botao-editar" [routerLink]="['/formulario', contato.id]">Editar</button>
     </div>
   </section>
 </app-container>
