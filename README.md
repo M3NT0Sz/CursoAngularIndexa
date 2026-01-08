@@ -1,27 +1,37 @@
+
 # Indexa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+Indexa é uma aplicação web desenvolvida durante os cursos da Alura para praticar conceitos fundamentais do Angular, incluindo componentes, templates, formulários, roteamento e integração com API REST.
 
-## Development server
+## O que foi feito
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Criação de uma aplicação Angular do zero utilizando Angular CLI
+- Estruturação de componentes reutilizáveis (cabeçalho, container, contato, mensagem de erro, separador)
+- Implementação de formulários reativos para cadastro e edição de contatos
+- Validação de formulários e exibição de mensagens de erro customizadas
+- Roteamento entre páginas (lista de contatos, formulário, perfil)
+- Consumo de API REST para persistência dos contatos (CRUD)
+- Separação de responsabilidades com uso de serviços
+- Estilização responsiva e moderna
 
-## Code scaffolding
+## Cursos realizados
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular: construa uma aplicação web com componentes, linguagem de template e CLI
+- Angular: evoluindo com formulários e roteamento
+- Angular: comunicando-se com uma API via requisições HTTP
 
-## Build
+## Projeto no LinkedIn
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Veja mais detalhes sobre este projeto no meu LinkedIn: [https://www.linkedin.com/in/m3nt0sz/details/projects/](https://www.linkedin.com/in/m3nt0sz/details/projects/)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## Comandos úteis para desenvolvimento
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- `ng serve` — Inicia o servidor de desenvolvimento em `http://localhost:4200/`.
+- `ng build` — Realiza o build do projeto, gerando os artefatos em `dist/`.
+- `ng test` — Executa os testes unitários via [Karma](https://karma-runner.github.io).
+- `ng e2e` — Executa testes end-to-end (necessário configurar o pacote de e2e).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para mais informações sobre Angular CLI, consulte a [documentação oficial](https://angular.io/cli).
